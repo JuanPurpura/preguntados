@@ -6,22 +6,23 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
+
 export class PreguntasService {
-  preguntas: any[] =[];
+  preguntas: Pregunta[] = [];
 
   constructor(private db: AngularFireDatabase) {}
 
   getConexion() {
-    return new Promise( (resolve, reject)=>{
-      this.db.object('preguntas/').snapshotChanges().subscribe( (datos: any) => {
-      console.log(datos);
-      if(datos.payload.exists()){
-        resolve(this.preguntas = datos.payload.val());
-      }else{
-        reject(new Error('Ocurrió un problema en BD'));
-      }
+    return new Promise((resolve, reject) => {
+      this.db.object('preguntas/').snapshotChanges().subscribe((datos: any) => {
+        if (datos.payload.exists()) {
+          this.preguntas = Object.values(datos.payload.val());
+          resolve(this.preguntas);
+        } else {
+          reject(new Error('Ocurrió un problema en BD'));
+        }
+      });
     });
-   });
   }
 
   getArrPreguntas(): Pregunta[]{
@@ -29,7 +30,6 @@ export class PreguntasService {
   }
 
   agregarPregunta(pregunta: Pregunta): void {
-    // Suponiendo que 'preguntas/' es la ruta correcta a tus preguntas en la base de datos
     const nuevaPreguntaRef = this.db.list('preguntas/');
     nuevaPreguntaRef.push(pregunta);
   }

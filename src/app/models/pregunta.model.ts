@@ -1,11 +1,9 @@
 export class Pregunta {
-  id: number;
   texto: string;
   respuestas: string[];
   respuestaCorrecta: string;
 
-  constructor(id: number, texto: string, respuestas: string[], respuestaCorrecta: string ){
-    this.id=id;
+  constructor(texto: string, respuestas: string[], respuestaCorrecta: string ){
     this.texto = texto;
     this.respuestas = respuestas;
     this.respuestaCorrecta = respuestaCorrecta;

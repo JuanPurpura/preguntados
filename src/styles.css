@@ -1,28 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
-html, body{
-    display: table;
-    color: white !important;
-    width:100vw;
-    height:100vh;
-}
-.fondoGrape{
-     background-color: #D7EAED !important;;
-}
-
-.tituloJuego{
-    text-align: center;
-    margin: 5px 0px;
-    color: #52465E;
-    font-family: fantasy;
-}
-
-.container{
+/* Estilos generales para el body y html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Establecer un tamaño mínimo para el contenedor de la aplicación */
+  app-root {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    margin: 20px auto;
+    flex-direction: column;
+  }
+  
+  /* Establecer un estilo para el enlace de base */
+  a {
+    color: #007bff; /* Color azul para los enlaces */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+  }
+  
+  /* Estilos para los títulos */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Estilos para los párrafos */
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* Estilos para los contenedores de ancho máximo */
+  .container {
+    max-width: 1200px; /* O el ancho máximo que desees */
+    margin: 0 auto; /* Centrar horizontalmente */
     padding: 20px;
-    max-width: 800px !important;
-    background-color: #52465E;
-    border-radius: 30px;
-}
+  }
+  
+  /* Estilos para los contenedores flexibles */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Estilos para espaciado vertical */
+  .mt-4 {
+    margin-top: 16px;
+  }
+  
+  /* Estilos para espaciado horizontal */
+  .mx-4 {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  

@@ -16,13 +16,12 @@ export class PreguntasComponent {
     this.db.getConexion().then( ()=>{
       console.log('conexion exitosa!');
       this.preguntas=this.db.getArrPreguntas();
+      console.log(this.preguntas);
       this.mostrarPreguntaActual();
     }).catch( (err)=>{
       console.log(err);
     });
   }
-
-  
 
   mostrarPreguntaActual() {
     this.pregunta = this.preguntas[this.indicePreguntaActual];

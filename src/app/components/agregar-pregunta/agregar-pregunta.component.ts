@@ -8,7 +8,7 @@ import { PreguntasService } from 'src/app/providers/preguntas.service';
   styleUrls: ['./agregar-pregunta.component.css'],
 })
 export class AgregarPreguntaComponent {
-  nuevaPregunta: Pregunta = new Pregunta(0, '', [], '');
+  nuevaPregunta: Pregunta = new Pregunta('', [], '');
   respuestasInput: string = '';
 
   constructor(private preguntasService: PreguntasService) {}
@@ -21,7 +21,7 @@ export class AgregarPreguntaComponent {
     this.preguntasService.agregarPregunta(this.nuevaPregunta);
 
     // Limpiar el formulario después de agregar la pregunta
-    this.nuevaPregunta = new Pregunta(0, '', [], '');
+    this.nuevaPregunta = new Pregunta('', [], '');
     this.respuestasInput = '';
   }
 }
