@@ -1,0 +1,18 @@
+<form (submit)="agregarPregunta()">
+    <label>
+        Texto de la pregunta:
+        <input type="text" name="texto" [(ngModel)]="nuevaPregunta.texto" required />
+    </label>
+    <br />
+    <label>
+        Respuestas (separadas por comas):
+        <input type="text" name="respuestas" [(ngModel)]="respuestasInput" required />
+    </label>
+    <br />
+    <label>
+        Respuesta correcta:
+        <input type="text" name="respuestaCorrecta" [(ngModel)]="nuevaPregunta.respuestaCorrecta" required />
+    </label>
+    <br />
+    <button type="submit">Agregar</button>
+</form>

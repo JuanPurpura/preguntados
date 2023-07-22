@@ -1,0 +1,8 @@
+<p>holaa</p>
+<div *ngIf="pregunta">
+  <p>holaa</p>
+  <h2>{{ pregunta.texto }}</h2>
+  <div *ngFor="let respuesta of pregunta.respuestas">
+    <button (click)="verificarRespuesta(respuesta)">{{ respuesta }}</button>
+  </div>
+</div>
