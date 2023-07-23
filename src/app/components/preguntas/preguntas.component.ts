@@ -34,9 +34,11 @@ export class PreguntasComponent {
         this.mostrarPreguntaActual();
       } else {
         alert('¡Felicidades, has terminado el juego!');
+        window.location.reload();
       }
     } else {
       alert('Respuesta incorrecta, el juego ha terminado.');
+      window.location.reload();
     }
   }
 }

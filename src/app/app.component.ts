@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  /*
-  title = 'ahorcadoAngular';
-  arrCoincidencias = []; // esto es para corregir!
-  palabraAdivinar = '';
-
+  
   componenteAgregar = false;
   componenteJugar = true;
 
@@ -27,5 +23,5 @@ export class AppComponent {
     this.componenteAgregar = false;
     this.componenteJugar = true;
   }
-  */
+  
 }

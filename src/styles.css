@@ -35,28 +35,8 @@ body, html {
     line-height: 1.5;
   }
   
-  /* Estilos para los contenedores de ancho máximo */
-  .container {
-    max-width: 1200px; /* O el ancho máximo que desees */
-    margin: 0 auto; /* Centrar horizontalmente */
-    padding: 20px;
-  }
+
   
-  /* Estilos para los contenedores flexibles */
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   
-  /* Estilos para espaciado vertical */
-  .mt-4 {
-    margin-top: 16px;
-  }
   
-  /* Estilos para espaciado horizontal */
-  .mx-4 {
-    margin-left: 16px;
-    margin-right: 16px;
-  }
   

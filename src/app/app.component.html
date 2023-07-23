@@ -1,8 +1,14 @@
 <div class="container">
   <div class="content">
-    <app-preguntas></app-preguntas>
+    <app-preguntas *ngIf="componenteJugar"></app-preguntas>
+    <app-agregar-pregunta *ngIf="componenteAgregar"></app-agregar-pregunta>
     <br>
     <br>
-    <app-agregar-pregunta></app-agregar-pregunta>
+    <br>
+
+    <div>
+      <button (click)="agregarPalabras()" *ngIf="componenteJugar" type="button">Agregar Preguntas</button>
+      <button (click)="regresarJuego()" *ngIf="componenteAgregar" type="button">Regresar al Juego</button>
+    </div>
   </div>
 </div>
