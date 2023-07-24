@@ -14,7 +14,7 @@ export class AppComponent {
 
   }
 
-  agregarPalabras(){
+  agregarPreguntas(){
     this.componenteAgregar = true;
     this.componenteJugar = false;
   }

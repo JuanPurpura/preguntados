@@ -11,6 +11,7 @@ export class PreguntasComponent {
   preguntas: Pregunta[]=[];
   pregunta!: Pregunta;
   indicePreguntaActual = 0;
+  vidas: number = 3;
 
   constructor(private db: PreguntasService) {
     this.db.getConexion().then( ()=>{
@@ -37,8 +38,13 @@ export class PreguntasComponent {
         window.location.reload();
       }
     } else {
-      alert('Respuesta incorrecta, el juego ha terminado.\nAdivinaste: '+this.indicePreguntaActual+' preguntas.');
-      window.location.reload();
+      this.vidas--;
+
+      if(this.vidas===0){
+        alert('Respuesta incorrecta, el juego ha terminado.\nAdivinaste: '+this.indicePreguntaActual+' preguntas.');
+        window.location.reload();
+      }
+      
     }
   }
 }
