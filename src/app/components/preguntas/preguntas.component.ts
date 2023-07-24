@@ -33,11 +33,11 @@ export class PreguntasComponent {
       if (this.indicePreguntaActual < this.preguntas.length) {
         this.mostrarPreguntaActual();
       } else {
-        alert('¡Felicidades, has terminado el juego!');
+        alert('¡Felicidades, has terminado el juego!\nAdivinaste: '+this.indicePreguntaActual+' preguntas.');
         window.location.reload();
       }
     } else {
-      alert('Respuesta incorrecta, el juego ha terminado.');
+      alert('Respuesta incorrecta, el juego ha terminado.\nAdivinaste: '+this.indicePreguntaActual+' preguntas.');
       window.location.reload();
     }
   }

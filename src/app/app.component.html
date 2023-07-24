@@ -1,14 +1,17 @@
 <div class="container">
   <div class="content">
-    <app-preguntas *ngIf="componenteJugar"></app-preguntas>
-    <app-agregar-pregunta *ngIf="componenteAgregar"></app-agregar-pregunta>
-    <br>
-    <br>
-    <br>
-
-    <div>
-      <button (click)="agregarPalabras()" *ngIf="componenteJugar" type="button">Agregar Preguntas</button>
-      <button (click)="regresarJuego()" *ngIf="componenteAgregar" type="button">Regresar al Juego</button>
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <app-preguntas *ngIf="componenteJugar"></app-preguntas>
+        <app-agregar-pregunta *ngIf="componenteAgregar"></app-agregar-pregunta>
+        <br>
+        <br>
+        <br>
+        <div class="text-center">
+          <button (click)="agregarPalabras()" *ngIf="componenteJugar" type="button" class="btn btn-secondary">Agregar Preguntas</button>
+          <button (click)="regresarJuego()" *ngIf="componenteAgregar" type="button" class="btn btn-secondary">Regresar al Juego</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

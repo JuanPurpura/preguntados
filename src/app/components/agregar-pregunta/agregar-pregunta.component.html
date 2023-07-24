@@ -1,19 +1,32 @@
-<h2>Agregá una pregunta nueva</h2>
-<form (submit)="agregarPregunta()">
-    <label>
-        Texto de la pregunta:
-        <input type="text" name="texto" [(ngModel)]="nuevaPregunta.texto" required />
-    </label>
-    <br />
-    <label>
-        Respuestas (separadas por comas):
-        <input type="text" name="respuestas" [(ngModel)]="respuestasInput" required />
-    </label>
-    <br />
-    <label>
-        Respuesta correcta:
-        <input type="text" name="respuestaCorrecta" [(ngModel)]="nuevaPregunta.respuestaCorrecta" required />
-    </label>
-    <br />
-    <button type="submit">Agregar</button>
-</form>
+<div class="container">
+    <div class="content">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <br />
+                <br />
+                <h2 class="text-center">Agregá una pregunta nueva</h2>
+                <br />
+                <form (submit)="agregarPregunta()">
+                    <div class="form-group">
+                        <label>Texto de la pregunta:</label>
+                        <input type="text" class="form-control" name="texto" [(ngModel)]="nuevaPregunta.texto"
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label>Respuestas (separadas por comas):</label>
+                        <input type="text" class="form-control" name="respuestas" [(ngModel)]="respuestasInput"
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label>Respuesta correcta:</label>
+                        <input type="text" class="form-control" name="respuestaCorrecta"
+                            [(ngModel)]="nuevaPregunta.respuestaCorrecta" required />
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

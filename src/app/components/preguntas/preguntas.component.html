@@ -1,6 +1,19 @@
-<div *ngIf="pregunta">
-  <h2>{{ pregunta.texto }}</h2>
-  <div *ngFor="let respuesta of pregunta.respuestas">
-    <button (click)="verificarRespuesta(respuesta)">{{ respuesta }}</button>
+<div class="container">
+  <div *ngIf="pregunta" class="row justify-content-center">
+    <div class="col-md-12 text-center">
+      <br/>
+      <br/>
+      <h2>{{ pregunta.texto }}</h2>
+      <br/>
+      <div class="row">
+        <div class="col-md-12">
+          <div *ngFor="let respuesta of pregunta.respuestas" class="mb-2">
+            <button (click)="verificarRespuesta(respuesta)" class="btn btn-primary btn-block">
+              {{ respuesta }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
